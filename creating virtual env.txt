@@ -1,0 +1,58 @@
+This sudo code is for creating a virtual environment for the enncrypto project. [For deployment in server]
+
+
+
+--> cd /opt         			[cd-change directory]
+
+--> sudo mkdir enncrypto             	[sudo mkdir (file-name)]
+
+give the password, and it will create a new directory called enncrypto
+
+--> cd enncrypto
+
+--> pip install virtualenv
+
+--> sudo python3 -m venv enncrypto      [sudo python3 -m venv (venv-name)]
+
+This will create a virtual env of enncrypto
+
+To activate a virtual environment
+
+--> source enncrypto/bin/activate       [source (venv-name)/bin/activate]
+
+Install required python modules with the correct version.
+
+--> pip3 install -r requirements.txt
+
+
+##############################################################################################################
+
+Install Python using Pyenv
+
+$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+  libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+  xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+$ curl https://pyenv.run | bash
+
+$ export PATH="$HOME/.pyenv/bin:$PATH"
+$ eval "$(pyenv init -)"
+$ eval "$(pyenv virtualenv-init -)"
+
+## for installing Python with specific version
+--> pyenv install 3.9
+
+Create virtual environment
+
+--> pyenv virtualenv 3.11.0 env_311
+
+Set global or local
+
+--> pyenv global env_311
+--> pyenv local env_311
+
+To activate venv
+
+--> pyenv activate env_311
+
+
+-->  export PYTHONPATH=$PYTHONPATH:/path/to/directory

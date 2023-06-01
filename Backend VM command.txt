@@ -1,0 +1,56 @@
+## To copy any file to the server
+sudo cp /path/to/file/location/pem_file.pem
+
+## To log in with username and pem file
+sudo chown likithp. pem_file.pem
+
+## To login to server
+ssh -vi Phoebe-Dev-ProdRnd_key_0428.pem Phoebe-Dev-Prod@20.221.236.235
+
+## To install packages/modules from the txt file.
+pip install -r req.txt --no-cache-dir
+
+## To upgrade pip
+pip install U-pip
+
+## To search modules in the installed list
+pip list|grep "module name"
+
+## In byobu
+f2 - new tab
+f3 - previous tab
+f4 - next tab
+f6 - to come out of byobu
+f8 - to rename the tab
+control+c - to stop the running server
+exit - to close the tab
+
+## To unzip the zip file in VM
+unzip file_name.zip
+
+## To run the server by GUNICORN [it will restart the code if the error occurs]
+/opt/likith/enn_env/bin/gunicorn app:app --bind 0.0.0.0:8105 -w10
+
+## To give permission for the folder to read and write.
+chmod 777 folder_name
+
+## Port open command
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent && sudo firewall-cmd --reload
+
+## to view a list
+du -sh
+df -h
+
+## to delete a file or directory
+rm -r file_name or directory_name
+
+## if the code already running
+ps -x   # to check the program
+kill -9 'number'   # to kill the program
+
+lsof -i:"port number"
+kill -9 <pid>
+
+## to create an alias
+sudo vim .bashrc
+

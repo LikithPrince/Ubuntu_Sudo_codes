@@ -1,0 +1,31 @@
+Sudo codes for creating virtual environment in Ubuntu when installed.
+
+1. First create user name and password.
+
+2. Then enter all the below codes one by one.
+
+sudo apt update
+
+sudo apt -y upgrade
+
+python3 -V
+
+sudo apt install -y python3-pip
+
+sudo apt install build-essential libssl-dev python3-dev
+
+sudo apt install -y python3-venv
+
+python3 -m venv [venv-name]				[python3 -m venv likith_env]
+
+source [venv-name]/bin/activate				[source likith_env/bin/activate]
+
+cd /mnt/c/User/LikithP/OneDrive\ -\ Ennoventure\ Inc/Documents/
+
+sudo apt install python-pip
+
+python -m pip install --upgrade pip
+
+pip install -r req.txt
+
+pip3 install [package-name]      			[pip3 install numpy]

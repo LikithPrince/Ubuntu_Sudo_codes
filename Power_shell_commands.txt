@@ -1,0 +1,7 @@
+To create virtual env in power shell (Windows)
+
+python -m venv enn_env   or py -3.6 -m venv enn_env
+
+To activate
+
+enn_env\Scripts\activate

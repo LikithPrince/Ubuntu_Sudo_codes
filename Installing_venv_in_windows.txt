@@ -1,0 +1,74 @@
+py -m pip install --upgrade pip
+
+py -m pip --version				[To check pip version]
+
+py -m pip install --user virtualenv			
+
+py -m venv enn_env					[py -m venv venv-name]
+
+.\enn_env\Scripts\activate				[to activate venv]  [.\venv-name\Scripts\activate]
+
+#if it gives an error, then try running this code in windows power shell.
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+or
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force
+
+where python
+
+...\env\Scripts\python.exe
+
+#As long as your virtual environment is activated pip will install packages into that specific environment and 
+you’ll be able to import and use packages in your Python application.
+
+#Leaving the virtual environment
+#If you want to switch projects or otherwise leave your virtual environment, simply run:
+
+deactivate
+
+#Installing packages
+
+py -m pip install requests
+
+#Installing from local archives
+#If you have a local copy of a Distribution Package’s archive (a zip, wheel, or tar file) you can install 
+#it directly with pip:
+
+py -m pip install requests-2.18.4.tar.gz
+
+#If you have a directory containing archives of multiple packages, you can tell pip to look for packages 
+there and not to use the Python Package Index (PyPI) at all:
+
+py -m pip install --no-index --find-links=/local/dir/ requests
+
+#This is useful if you are installing packages on a system with limited connectivity or if you want 
+to strictly control the origin of distribution packages.
+
+#Using other package indexes
+#If you want to download packages from a different index than the Python Package Index (PyPI), 
+you can use the --index-url flag:
+
+py -m pip install --index-url http://index.example.com/simple/ SomeProject
+
+
+#Upgrading packages
+#pip can upgrade packages in-place using the --upgrade flag. For example, to install the latest version 
+of requests and all of its dependencies:
+
+py -m pip install --upgrade requests
+
+
+#Using requirements files
+#Instead of installing packages individually, pip allows you to declare all dependencies in a 
+Requirements File. For example you could create a requirements.txt file containing:
+
+requests==2.18.4
+google-auth==1.1.0
+
+
+
+py -m pip install -r requirements.txt
